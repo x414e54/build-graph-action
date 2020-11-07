@@ -7,11 +7,12 @@ try {
   
   // TODO this seems pretty insecure.
   exec('"C:\\Program Files\\Epic Games\\UE_4.25\\Engine\\Build\\BatchFiles\\RunUAT.bat" BuildGraph -Script="' + script + '"', (err, stdout, stderr) => {
+    console.log(stdout);
+    console.log(stderr);
     if (err) {
       core.setFailed(err);
       return;
     }
-    console.log(stdout);
   });
 } catch (error) {
   core.setFailed(error.message);
