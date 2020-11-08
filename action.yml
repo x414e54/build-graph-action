@@ -5,6 +5,14 @@ inputs:
     description: 'Location of script'
     required: true
     default: ''
+  target:
+    description: 'Target build graph node'
+    required: true
+    default: ''
+  projectsroot:
+    description: 'Root directory for projects'
+    required: true
+    default: ''
 runs:
   using: 'node12'
   main: 'index.js'
